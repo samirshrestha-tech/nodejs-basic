@@ -18,6 +18,15 @@ app.use(express.urlencoded());
 const fn = __dirname + "/userList.csv";
 
 const port = 8000;
+
+// API endpoints
+app.get("/samir", (req, res) => {
+  const obj = {
+    message: "samir",
+  };
+  res.json(obj);
+});
+
 app.get("/login", (req, res) => {
   res.sendFile(__dirname + "/login.html");
 });
